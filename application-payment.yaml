@@ -15,12 +15,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
-
-
   kafka:
     bootstrap-servers: localhost:9092
     producer:
@@ -32,3 +26,8 @@ eureka:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
